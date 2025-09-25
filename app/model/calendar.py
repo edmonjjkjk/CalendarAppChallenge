@@ -29,7 +29,7 @@ class Reminder:
 
     def __str__(self)-> str:
         return f"Reminder on {self.date_time} of type {self.type}"
-@dataclass()
+@dataclass
 class Event:
     title: str
     description: str
@@ -38,6 +38,10 @@ class Event:
     end_at: time
     reminders: list[Reminder] = field(init=False, default= list)
     id: str = field(default_factory = generate_unique_id)
+
+    def add__reminder(self, date_time: datetime, type: str):
+        self.reminders.append(Reminder(date_time, type))
+
 
 
 

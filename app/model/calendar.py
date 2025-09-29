@@ -23,7 +23,7 @@ from app.services.util import generate_unique_id, date_lower_than_today_error, e
 class Reminder:
     EMAIL: str = field(init= False, default = "email")
     SYSTEM: str = field(init=False, default= "system")
-#
+#ha
     date_time:  datetime
     type: str = ClassVar[EMAIL]
 
